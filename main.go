@@ -50,9 +50,9 @@ func main() {
 		middleware.Recoverer,
 		cors.Handler(cors.Options{
 			AllowedOrigins:   []string{"*"},
-			AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIO    NS"},
+			AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 			AllowCredentials: false,
-			MaxAge:           300, // Maximum value not ignored by any of maj    or browsers
+			MaxAge:           300, // Maximum value not ignored by any of major browsers
 		}),
 	)
 
