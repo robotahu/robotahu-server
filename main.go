@@ -35,7 +35,7 @@ func main() {
 
 	rootQuery := gql.NewRoot(db)
 
-	sc, err := graphql.NewSchema(graphql.SchemaConfig{Query: rootQuery.Query})
+	sc, err := graphql.NewSchema(graphql.SchemaConfig{Query: rootQuery.Query, Mutation: rootQuery.Mutation})
 	if err != nil {
 		fmt.Println("Error creating schema:", err)
 	}
